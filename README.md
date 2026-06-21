@@ -11,9 +11,14 @@ SocialSync deep linking & attribution SDK for Flutter (Android + iOS).
 
 ## Install
 
+From git (the package name is `socialsync_attribution`; the repo is `brandingbeam_attribution`):
+
 ```yaml
 dependencies:
-  socialsync_attribution: ^0.0.1
+  socialsync_attribution:
+    git:
+      url: https://github.com/kushfintech/brandingbeam_attribution.git
+      ref: v0.0.1   # or main
 ```
 
 ### Android

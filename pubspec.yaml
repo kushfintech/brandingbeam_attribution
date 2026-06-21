@@ -1,7 +1,8 @@
 name: socialsync_attribution
 description: "SocialSync deep linking & attribution SDK — deferred deep linking and click→install→conversion tracking for Flutter (Android + iOS)."
 version: 0.0.1
-homepage:
+homepage: https://github.com/kushfintech/brandingbeam_attribution
+repository: https://github.com/kushfintech/brandingbeam_attribution
 
 environment:
   sdk: ^3.11.5
