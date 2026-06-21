@@ -1,10 +1,10 @@
 import Flutter
 import UIKit
 
-public class SocialsyncAttributionPlugin: NSObject, FlutterPlugin {
+public class BrandingbeamAttributionPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "socialsync_attribution", binaryMessenger: registrar.messenger())
-    let instance = SocialsyncAttributionPlugin()
+    let channel = FlutterMethodChannel(name: "brandingbeam_attribution", binaryMessenger: registrar.messenger())
+    let instance = BrandingbeamAttributionPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 

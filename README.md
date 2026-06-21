@@ -1,6 +1,6 @@
-# socialsync_attribution
+# brandingbeam_attribution
 
-SocialSync deep linking & attribution SDK for Flutter (Android + iOS).
+BrandingBeam deep linking & attribution SDK for Flutter (Android + iOS).
 
 - **Deferred deep linking** — resolve the link a user clicked *before* installing.
   - **Android**: deterministic via the Google Play **Install Referrer**.
@@ -11,11 +11,11 @@ SocialSync deep linking & attribution SDK for Flutter (Android + iOS).
 
 ## Install
 
-From git (the package name is `socialsync_attribution`; the repo is `brandingbeam_attribution`):
+From git:
 
 ```yaml
 dependencies:
-  socialsync_attribution:
+  brandingbeam_attribution:
     git:
       url: https://github.com/kushfintech/brandingbeam_attribution.git
       ref: v0.0.1   # or main
@@ -23,7 +23,7 @@ dependencies:
 
 ### Android
 The Play Install Referrer dependency is bundled. No extra setup. For App Links, declare your
-`assetlinks.json` (served by the SocialSync link domain) and an intent filter for your domain.
+`assetlinks.json` (served by the BrandingBeam link domain) and an intent filter for your domain.
 
 ### iOS
 Enable **Associated Domains** and add `applinks:your-link-domain` so Universal Links open the app.
@@ -31,14 +31,14 @@ Enable **Associated Domains** and add `applinks:your-link-domain` so Universal L
 ## Usage
 
 ```dart
-import 'package:socialsync_attribution/socialsync_attribution.dart';
+import 'package:brandingbeam_attribution/brandingbeam_attribution.dart';
 
-final sdk = SocialsyncAttribution();
+final sdk = BrandingbeamAttribution();
 
 void main() {
   sdk.init(
-    publishableKey: 'pk_live_xxxxxxxx',     // from the SocialSync dashboard → SDK & Settings
-    baseUrl: 'https://api.yourdomain.com',  // your SocialSync backend
+    publishableKey: 'pk_live_xxxxxxxx',     // from the BrandingBeam dashboard → SDK & Settings
+    baseUrl: 'https://api.yourdomain.com',  // your BrandingBeam backend
   );
   runApp(const MyApp());
 }

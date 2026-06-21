@@ -1,6 +1,6 @@
-# socialsync_attribution_example
+# brandingbeam_attribution_example
 
-Demonstrates how to use the socialsync_attribution plugin.
+Demonstrates how to use the brandingbeam_attribution plugin.
 
 ## Getting Started
 

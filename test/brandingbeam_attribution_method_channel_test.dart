@@ -1,12 +1,12 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:socialsync_attribution/socialsync_attribution_method_channel.dart';
+import 'package:brandingbeam_attribution/brandingbeam_attribution_method_channel.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  MethodChannelSocialsyncAttribution platform = MethodChannelSocialsyncAttribution();
-  const MethodChannel channel = MethodChannel('socialsync_attribution');
+  MethodChannelBrandingbeamAttribution platform = MethodChannelBrandingbeamAttribution();
+  const MethodChannel channel = MethodChannel('brandingbeam_attribution');
 
   setUp(() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger

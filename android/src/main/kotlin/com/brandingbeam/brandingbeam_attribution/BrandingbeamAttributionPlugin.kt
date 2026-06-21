@@ -1,4 +1,4 @@
-package com.socialsync.socialsync_attribution
+package com.brandingbeam.brandingbeam_attribution
 
 import android.content.Context
 import android.os.Build
@@ -13,8 +13,8 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 
-/** SocialsyncAttributionPlugin — exposes device signals + the Play Install Referrer. */
-class SocialsyncAttributionPlugin :
+/** BrandingbeamAttributionPlugin — exposes device signals + the Play Install Referrer. */
+class BrandingbeamAttributionPlugin :
     FlutterPlugin,
     MethodCallHandler {
     private lateinit var channel: MethodChannel
@@ -23,7 +23,7 @@ class SocialsyncAttributionPlugin :
 
     override fun onAttachedToEngine(binding: FlutterPlugin.FlutterPluginBinding) {
         context = binding.applicationContext
-        channel = MethodChannel(binding.binaryMessenger, "socialsync_attribution")
+        channel = MethodChannel(binding.binaryMessenger, "brandingbeam_attribution")
         channel.setMethodCallHandler(this)
     }
 

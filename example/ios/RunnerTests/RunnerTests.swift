@@ -3,7 +3,7 @@ import UIKit
 import XCTest
 
 
-@testable import socialsync_attribution
+@testable import brandingbeam_attribution
 
 // This demonstrates a simple unit test of the Swift portion of this plugin's implementation.
 //
@@ -12,7 +12,7 @@ import XCTest
 class RunnerTests: XCTestCase {
 
   func testGetPlatformVersion() {
-    let plugin = SocialsyncAttributionPlugin()
+    let plugin = BrandingbeamAttributionPlugin()
 
     let call = FlutterMethodCall(methodName: "getPlatformVersion", arguments: [])
 

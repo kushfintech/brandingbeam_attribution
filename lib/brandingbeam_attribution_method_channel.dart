@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import 'socialsync_attribution_platform_interface.dart';
+import 'brandingbeam_attribution_platform_interface.dart';
 
-/// An implementation of [SocialsyncAttributionPlatform] that uses method channels.
-class MethodChannelSocialsyncAttribution extends SocialsyncAttributionPlatform {
+/// An implementation of [BrandingbeamAttributionPlatform] that uses method channels.
+class MethodChannelBrandingbeamAttribution extends BrandingbeamAttributionPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('socialsync_attribution');
+  final methodChannel = const MethodChannel('brandingbeam_attribution');
 
   @override
   Future<String?> getPlatformVersion() async {

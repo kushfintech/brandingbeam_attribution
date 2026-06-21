@@ -1,1 +1,1 @@
-rootProject.name = 'socialsync_attribution'
+rootProject.name = 'brandingbeam_attribution'

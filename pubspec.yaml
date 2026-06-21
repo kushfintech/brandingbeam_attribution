@@ -1,5 +1,5 @@
-name: socialsync_attribution
-description: "SocialSync deep linking & attribution SDK — deferred deep linking and click→install→conversion tracking for Flutter (Android + iOS)."
+name: brandingbeam_attribution
+description: "BrandingBeam deep linking & attribution SDK — deferred deep linking and click→install→conversion tracking for Flutter (Android + iOS)."
 version: 0.0.1
 homepage: https://github.com/kushfintech/brandingbeam_attribution
 repository: https://github.com/kushfintech/brandingbeam_attribution
@@ -37,10 +37,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.socialsync.socialsync_attribution
-        pluginClass: SocialsyncAttributionPlugin
+        package: com.brandingbeam.brandingbeam_attribution
+        pluginClass: BrandingbeamAttributionPlugin
       ios:
-        pluginClass: SocialsyncAttributionPlugin
+        pluginClass: BrandingbeamAttributionPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

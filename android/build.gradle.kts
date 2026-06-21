@@ -1,4 +1,4 @@
-group = "com.socialsync.socialsync_attribution"
+group = "com.brandingbeam.brandingbeam_attribution"
 version = "1.0-SNAPSHOT"
 
 buildscript {
@@ -27,7 +27,7 @@ plugins {
 }
 
 android {
-    namespace = "com.socialsync.socialsync_attribution"
+    namespace = "com.brandingbeam.brandingbeam_attribution"
 
     compileSdk = 36
 

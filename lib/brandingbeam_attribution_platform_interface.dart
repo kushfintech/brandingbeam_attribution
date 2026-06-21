@@ -1,25 +1,25 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'socialsync_attribution_method_channel.dart';
+import 'brandingbeam_attribution_method_channel.dart';
 
-abstract class SocialsyncAttributionPlatform extends PlatformInterface {
-  /// Constructs a SocialsyncAttributionPlatform.
-  SocialsyncAttributionPlatform() : super(token: _token);
+abstract class BrandingbeamAttributionPlatform extends PlatformInterface {
+  /// Constructs a BrandingbeamAttributionPlatform.
+  BrandingbeamAttributionPlatform() : super(token: _token);
 
   static final Object _token = Object();
 
-  static SocialsyncAttributionPlatform _instance =
-      MethodChannelSocialsyncAttribution();
+  static BrandingbeamAttributionPlatform _instance =
+      MethodChannelBrandingbeamAttribution();
 
-  /// The default instance of [SocialsyncAttributionPlatform] to use.
+  /// The default instance of [BrandingbeamAttributionPlatform] to use.
   ///
-  /// Defaults to [MethodChannelSocialsyncAttribution].
-  static SocialsyncAttributionPlatform get instance => _instance;
+  /// Defaults to [MethodChannelBrandingbeamAttribution].
+  static BrandingbeamAttributionPlatform get instance => _instance;
 
   /// Platform-specific implementations should set this with their own
-  /// platform-specific class that extends [SocialsyncAttributionPlatform] when
+  /// platform-specific class that extends [BrandingbeamAttributionPlatform] when
   /// they register themselves.
-  static set instance(SocialsyncAttributionPlatform instance) {
+  static set instance(BrandingbeamAttributionPlatform instance) {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
   }

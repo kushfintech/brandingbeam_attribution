@@ -5,11 +5,11 @@ import 'dart:ui' show PlatformDispatcher;
 
 import 'package:http/http.dart' as http;
 
-import 'socialsync_attribution_platform_interface.dart';
+import 'brandingbeam_attribution_platform_interface.dart';
 
-export 'socialsync_attribution_platform_interface.dart';
+export 'brandingbeam_attribution_platform_interface.dart';
 
-/// The resolved attribution payload returned from [SocialsyncAttribution.trackOpen].
+/// The resolved attribution payload returned from [BrandingbeamAttribution.trackOpen].
 class AttributionResult {
   AttributionResult({
     required this.installId,
@@ -56,18 +56,18 @@ class AttributionResult {
   }
 }
 
-/// SocialSync deep linking + attribution SDK.
+/// BrandingBeam deep linking + attribution SDK.
 ///
 /// ```dart
-/// final sdk = SocialsyncAttribution();
+/// final sdk = BrandingbeamAttribution();
 /// sdk.init(publishableKey: 'pk_live_xxx', baseUrl: 'https://api.example.com');
 /// final result = await sdk.trackOpen();          // deferred deep link on first open
 /// if (result.deepLink != null) router.go(result.deepLink!);
 /// await sdk.trackLead(customerExternalId: user.id, customerEmail: user.email);
 /// await sdk.trackSale(customerExternalId: user.id, amount: 1999, currency: 'USD');
 /// ```
-class SocialsyncAttribution {
-  SocialsyncAttribution({http.Client? client}) : _client = client ?? http.Client();
+class BrandingbeamAttribution {
+  BrandingbeamAttribution({http.Client? client}) : _client = client ?? http.Client();
 
   String? _publishableKey;
   Uri? _baseUri;
@@ -86,7 +86,7 @@ class SocialsyncAttribution {
   String? get clickId => _clickId;
 
   Future<String?> getPlatformVersion() {
-    return SocialsyncAttributionPlatform.instance.getPlatformVersion();
+    return BrandingbeamAttributionPlatform.instance.getPlatformVersion();
   }
 
   Map<String, String> get _headers => {
@@ -97,7 +97,7 @@ class SocialsyncAttribution {
   Uri _endpoint(String path) {
     final base = _baseUri;
     if (base == null || _publishableKey == null) {
-      throw StateError('SocialsyncAttribution.init() must be called before use.');
+      throw StateError('BrandingbeamAttribution.init() must be called before use.');
     }
     return base.resolve(path);
   }
@@ -107,7 +107,7 @@ class SocialsyncAttribution {
   ///
   /// For iOS the match runs asynchronously server-side; this polls briefly while it resolves.
   Future<AttributionResult> trackOpen({String? deepLink}) async {
-    final context = await SocialsyncAttributionPlatform.instance.getInstallContext();
+    final context = await BrandingbeamAttributionPlatform.instance.getInstallContext();
     final platform = Platform.isIOS ? 'ios' : 'android';
 
     final body = <String, dynamic>{
@@ -207,7 +207,7 @@ class SocialsyncAttribution {
   Map<String, dynamic> _decode(http.Response res) {
     if (res.statusCode >= 400) {
       throw http.ClientException(
-        'SocialsyncAttribution request failed (${res.statusCode}): ${res.body}',
+        'BrandingbeamAttribution request failed (${res.statusCode}): ${res.body}',
       );
     }
     if (res.body.isEmpty) return <String, dynamic>{};
